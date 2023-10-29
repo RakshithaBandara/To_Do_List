@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashboardFormController">
+   <children>
+      <ListView fx:id="lstToDo" layoutX="14.0" layoutY="14.0" prefHeight="373.0" prefWidth="200.0" />
+      <Label fx:id="lblUserIWelcome" layoutX="222.0" layoutY="14.0" text="Hi User, Welcome to To-Do List" />
+      <Label fx:id="lblUserID" layoutX="532.0" layoutY="14.0" prefHeight="17.0" prefWidth="54.0" />
+      <TextField fx:id="txtSelectedDescription" layoutX="222.0" layoutY="67.0" prefHeight="25.0" prefWidth="366.0" />
+      <Separator layoutX="222.0" layoutY="160.0" prefHeight="0.0" prefWidth="366.0" />
+      <Button fx:id="btnDelete" layoutX="530.0" layoutY="103.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" style="-fx-background-color: #c90000;" text="Delete" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnUpdate" layoutX="460.0" layoutY="103.0" mnemonicParsing="false" onAction="#btnUpdateOnAction" style="-fx-background-color: green;" text="Update" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="222.0" layoutY="175.0" mnemonicParsing="false" onAction="#btnAddNewToDoOnAction" style="-fx-background-color: Blue;" text="+ Add New To Do" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Pane fx:id="subRoot" layoutX="222.0" layoutY="231.0" prefHeight="117.0" prefWidth="366.0" style="-fx-border-color: black;">
+         <children>
+            <TextField fx:id="txtDescription" layoutX="14.0" layoutY="37.0" onAction="#txtDescriptionOnAction" prefHeight="25.0" prefWidth="339.0" />
+            <Label layoutX="14.0" layoutY="13.0" text="Task Name">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Button layoutX="245.0" layoutY="74.0" mnemonicParsing="false" onAction="#btnAddToListOnAction" prefHeight="25.0" prefWidth="108.0" style="-fx-background-color: green;" text="Add To List" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Button layoutX="499.0" layoutY="357.0" mnemonicParsing="false" onAction="#btnLogoutOnAction" style="-fx-background-color: green;" text="&lt;&lt; Log out" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
